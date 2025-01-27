@@ -1,0 +1,117 @@
+#include <iostream> //Library for input and out, used for things like cin and cout
+#include <string> //Library that allows us to use and manipulate strings
+#include <ctddlib> //Library for general purpose functions, including random numbers 
+#include <time> //Library for handling time functions, used for radomizing 
+#include <algorithm> //Library for a variety of functions; we use this to search an array
+using namespace std; // This line lets us use standard library objects without a prefix
+
+//Global variables
+const int MAX_INCORRECT = 6; // Maximum of guesses allowed
+char incrorrect[MAX_INCORRECT]; //Array to hold incorrect guesses
+int numincorrect = 0; // Counter for the number of incorrect guesses made
+int misses = 0; // Counter for the number if misses
+
+
+void displayhangman()
+void display(string guessword)
+
+int main{
+
+
+
+
+
+
+
+
+
+
+}
+
+void displayhangman() {
+	cout << "\n"; // Print a new line for spacing
+	switch (misses) { // Check the number of misses and show the apporiate hangman stage
+	case 0:
+		cout << "   +---+\n";
+		cout << "   |   |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "==========\n";
+		break;
+
+	case 1:
+		cout << "   +---+\n";
+		cout << "   |   |\n";
+		cout << "   O   |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "==========\n";
+		break
+
+	case 2:
+		cout << "   +---+\n";
+		cout << "   |   |\n";
+		cout << "   O   |\n";
+		cout << "   |   |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "==========\n";
+		break
+
+	case 3:
+		cout << "   +---+\n";
+		cout << "   |   |\n";
+		cout << "   O   |\n";
+		cout << "   |\  |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "==========\n";
+		break
+
+	case 4:
+		cout << "   +---+\n";
+		cout << "   |   |\n";
+		cout << "   O   |\n";
+		cout << "  /|\  |\n";
+		cout << "       |\n";
+		cout << "       |\n";
+		cout << "==========\n";
+		break
+	
+	case 5:
+		cout << "   +---+\n";
+		cout << "   |   |\n";
+		cout << "   O   |\n";
+		cout << "  /|\  |\n";
+		cout << "    \  |\n";
+		cout << "       |\n";
+		cout << "==========\n";
+		break
+
+	case 6:
+		cout << "   +---+\n";
+		cout << "   |   |\n";
+		cout << "   O   |\n";
+		cout << "  /|\  |\n";
+		cout << "  / \  |\n";
+		cout << "       |\n";
+		cout << "==========\n";
+		break
+	}
+	//Function to dusplay the current state of the game
+	void display(string guessword) {
+		cout << "\n Word";
+		for (int i = 0; i < guessword.length() i++) {
+			cout << guessedword[i] << ' '; //Show each chatacter in the guessed word followed by a space
+		}
+		cout << "\n Incorrect guesses:";
+		for (int i = 0; i < numincorrect.length();) {
+			cout << numincorrect[i] << ' ';
+		}
+		cout << "\n Misses left:" << MAX_INCORRECT - misses << "\n"; //Show how many guesses are left
+		displayhangman(); //Call the function to show the hangman drawing
+	}
+}
